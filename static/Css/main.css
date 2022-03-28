@@ -1,14 +1,23 @@
 /** creacion de variables globales*/
 :root {
-    --primary-color: #0bebba;
-    --secundary-color: #9c000e;
-    --boton-success: #a8b6ae;
-    --boton-secundary: #84898a;
-    --boton-warning: #0f1a13;
+    --primary-color: #16342C;
+    --secundary-color:  #3C6962;
+    --boton-success: #69A293;
+    --boton-secundary: #3C6962;
+    --boton-warning: #AEEBDB;
     --boton-cancelar: #fe4093;
     --font-size:16px;
     --font-color:rgb(0, 0, 0);
     --font-color-reverse:#fff;
+    /* --primary-color: #16342C;
+    --secundary-color:  #3C6962;
+    --boton-success: #69A293;
+    --boton-secundary: #3C6962;
+    --boton-warning: #AEEBDB;
+    --boton-cancelar: #fe4093;
+    --font-size:16px;
+    --font-color:rgb(0, 0, 0);
+    --font-color-reverse:#fff; */
 }
 /** reseteo de estilos */
 html{
@@ -46,10 +55,10 @@ li{
 
 .principal{
     position: relative;
-    top: -10px;
+    top: -15px;
     text-align: center;
     background-color: var(--boton-secundary);
-    height: 200vh;
+    height: 150vh;
 
 }
 .principal h1{

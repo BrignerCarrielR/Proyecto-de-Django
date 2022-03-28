@@ -35,7 +35,15 @@ class EmpleadoForm(forms.ModelForm):
                 'placeholder':'Ingrese Nombre',
                 'class':'form-group',
                 'required':True}),
-            'cedula':forms.NumberInput(attrs={
+            'cargo': forms.Select(attrs={
+                'class':'form-group',
+                'required':True,
+                }),
+            'departamento': forms.Select(attrs={
+                'class':'form-group',
+                'required':True,
+                }),
+            'cedula':forms.TextInput(attrs={
                 'placeholder':'Ingrese Cédula',
                 'class':'form-group',
                 'required':True,

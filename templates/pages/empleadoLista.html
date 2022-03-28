@@ -13,7 +13,7 @@
 {% block contenido %}
 <section class="form-container">
     <a style="border-radius: 2px; padding: 2px; text-align: center"
-        href="{% url 'empleado' %}"><button style="background:#0bebba; border-radius: 5px; padding: 5px;"
+        href="{% url 'empleado' %}"><button style="background:#AEEBDB; border-radius: 5px; padding: 5px;"
         type="submit"> Añadir Empleado </button></a>
     <div class="form-header">
         <h1>Listado de Empleados</h1>
@@ -36,7 +36,7 @@
                     <td>{{empleado.id}}</td>
                     <td>{{empleado.nombre}}</td>
                     <td>{{empleado.cedula}}</td>
-                    <td>{{empleado.cargo}}</td>
+                    <td>{{empleado.cargo}}</td> 
                     <td>{{empleado.departamento}}</td>
                     <td>{{empleado.sueldo}}</td>
                     <td>{% if empleado.estado %}
