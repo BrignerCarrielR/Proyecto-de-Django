@@ -1,0 +1,50 @@
+{% extends "inicio.html" %}
+{% block titulo %}
+    Cargo 
+{% endblock %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'Css/form.css' %}">
+{% endblock %}
+
+{% block contenido %}
+
+<section class="form-container">
+    <a style="border-radius: 2px; padding: 2px; text-align: center"
+        href="{% url 'cargo' %}"><button style="background:#0bebba; border-radius: 5px; padding: 5px;"
+        type="submit">Añadir Cargo </button></a>
+    <div class="form-header">
+        <h1>Listado de Cargos</h1>
+    </div>
+    <div class="consulta none table-responsive" id="consulta">
+        <table class="consulta-est" id="consulta-est" border="1">
+            <thead>
+                <th>#</th>
+                <th>Descripción</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+            </thead>
+            <tbody class="detalle-est" id="detalle-est">
+                {% for cargo in cargos %}
+                <tr>
+                    <td>{{cargo.id}}</td>
+                    <td>{{cargo.descripcion}}</td>
+                    <td>
+                        {% if cargo.estado %}
+                            Activo
+                        {% else %}
+                            Inactivo
+                        {% endif %}
+                    </td>
+                    <td class="acciones">
+                        <a href="{% url 'editar_cargo' cargo.id %}">✏️</a>
+                        <a href="{% url 'eliminar_cargo' cargo.id %}">✖️</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</section>
+{% endblock %}
+

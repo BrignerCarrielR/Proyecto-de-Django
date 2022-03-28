@@ -1,0 +1,30 @@
+{% extends "inicio.html" %}
+
+{% block titulo %}
+    Departamento 
+{% endblock %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'Css/form.css' %}">
+{% endblock %}
+
+{% block contenido %}
+<section class="form-container">
+    <a style="border-radius: 2px; padding: 2px; text-align: center"
+        href="{% url 'departamentoLista' %}"><button style="background:#0bebba; border-radius: 5px; padding: 5px;"
+        type="submit"> Volver </button></a>
+    <div class="form-header">
+        <h1>Formulario de Departamento</h1>
+    </div>
+    <form method="POST" id="form-departamento" class="form">
+        {% csrf_token %}
+        {{departamentoForm.as_p}}
+        <button 
+            id="enviar"
+            type="submit"
+            name="enviar">
+            {{accion}}
+        </button>
+    </form>
+</section>
+{% endblock %}
